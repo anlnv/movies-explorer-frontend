@@ -1,0 +1,151 @@
+.search {
+  padding: 68px 70px 0;
+}
+
+.search__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  border-bottom: 1px solid var(--secondary-border);
+  padding-bottom: 43px;
+}
+
+.search__label {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 10px 8px 22px;
+  border: 1.5px solid var(--secondary-border);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.search__label:focus-within {
+  border: 1px solid var(--focus-border);
+}
+
+.search__input {
+  width: 80%;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px; /* 111.111% */
+}
+
+.search__input::placeholder {
+  color: var(--secondary-color);
+}
+
+.search__btn {
+  padding: 17px 28px;
+  margin: 0;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  background: var(--btn-blue);
+}
+
+.search__checkbox-wrapper {
+  display: flex;
+  gap: 14px;
+}
+
+.search__checkbox-label {
+  position: relative;
+  display: flex;
+}
+
+.search__checkbox {
+  position: absolute;
+  appearance: none;
+}
+
+.search__checkbox-span {
+  width: 36px;
+  height: 20px;
+  border-radius: 20px;
+  background: #343434;
+}
+
+.search__checkbox-span::before {
+  width: 8px;
+  height: 8px;
+  background: #a0a0a0;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  transition: var(--duration-all);
+}
+
+.search__checkbox:checked ~ .search__checkbox-span {
+  background: var(--bg-green);
+}
+
+.search__checkbox:checked ~ .search__checkbox-span::before {
+  background: #fff;
+  left: 22px;
+}
+
+.search__checkbox-title {
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px; /* 138.462% */
+}
+
+@media (hover:hover) {
+  .search__checkbox-label:hover {
+    cursor: pointer;
+    opacity: .8;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .search {
+    padding: 68px 30px 0;
+  }
+
+  .search__form {
+    padding-bottom: 51px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .search {
+    padding: 68px 14px 0;
+  }
+
+  .search__input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px; /* 100% */
+  }
+
+  .search__label {
+    padding: 5px 6px;
+  }
+
+  .search__btn {
+    padding: 13px 18px;
+  }
+
+  .search__form {
+    gap: 30px;
+    padding-bottom: 63px;
+  }
+
+  .search__checkbox-title {
+    font-size: 11px;
+  }
+}
