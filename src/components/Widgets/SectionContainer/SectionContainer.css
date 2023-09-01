@@ -1,0 +1,29 @@
+.wrapper {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-baseline {
+  align-items: baseline;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.fd-column-reverse {
+  flex-direction: column-reverse;
+}

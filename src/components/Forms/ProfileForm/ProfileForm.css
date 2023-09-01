@@ -1,0 +1,133 @@
+.profile {
+  padding: 57px 70px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__form {
+  width: 100%;
+  max-width: 410px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.profile__title {
+  /*margin: 123px 0 0;*/
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.profile__data-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__data-wrapper:first-of-type {
+  margin-top: 89px;
+  border-bottom: 1px solid var(--secondary-border);
+}
+
+.profile__data-wrapper:focus-within .profile__input-name {
+  color: var(--link-color);
+}
+
+.profile__label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__input-name {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.profile__input {
+  max-width: 85%;
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+  background-color: transparent;
+  text-align: right;
+  font-size: 11px;
+}
+
+.profile__input_type_error {
+  color: var(--error-color);
+}
+
+.profile__input-error {
+  color: var(--error-color);
+  font-size: 10px;
+  min-height: 15px;
+}
+
+.profile__btn-wrapper {
+  margin-top: 187px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile__btn {
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 13px;
+}
+
+.profile__btn_disabled {
+  cursor: not-allowed;
+  color: var(--inactive-color);
+}
+
+.profile__btn_type_signout {
+  color: var(--error-color);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1100px) {
+  .profile {
+    padding-top: 125px;
+  }
+
+  .profile__form {
+    margin-top: 94px;
+  }
+
+  .profile__data-wrapper:first-of-type {
+    margin-top: 62px;
+  }
+
+  .profile__btn-wrapper {
+    margin-top: 177px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profile {
+    padding: 70px 30px 0;
+  }
+
+  .profile__title {
+    margin: 0;
+  }
+
+  .profile__form {
+    margin: 0;
+    min-height: calc(90svh - 90px);
+  }
+
+  .profile__btn-wrapper {
+    margin: auto 0 20px;
+  }
+
+  .profile__btn {
+    font-size: 12px;
+  }
+}

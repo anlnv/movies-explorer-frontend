@@ -1,0 +1,94 @@
+@import url(./assets/vendor/normalize.css);
+@import url(./assets/vendor/fonts.css);
+
+html,
+body {
+  scrollbar-gutter: stable;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--bg-primary);
+  border-radius: 10px;
+  border: 1px solid var(--secondary-border);
+}
+
+:root {
+  /*fonts*/
+  --primary-color: #FFFFFF;
+  --primary-color-inverted: #000;
+  --secondary-color: #8B8B8B;
+  --error-color: #EE3465;
+  --link-color: #4285F4;
+  --inactive-color: #C2C2C2;
+
+  /*backgrounds*/
+  --bg-primary: #202020;
+  --bg-secondary: #272727;
+  --bg-header: #073042;
+  --bg-cover: #000;
+  --bg-caption: #303030;
+  --bg-card: #222222;
+  --bg-green: #3DDC84;
+  --bg-inactive-cb: #ebebeb;
+  --bg-inactive-cb-circle: #f5f5f5;
+
+  /*btn*/
+  --btn-blue: #4285F4;
+  --btn-green: #3DDC84;
+  --btn-gray: #313131;
+  --btn-pagination: #2F2F2F;
+  --btn-inactive: #F8F8F8;
+
+  /*borders*/
+  --section-border: #DADADA;
+  --primary-border: #AAAAAA;
+  --secondary-border: #424242;
+  --focus-border: #4285F4;
+
+  /*other*/
+  --duration-all: all .2s;
+}
+
+.app {
+  font-family: 'Inter', Arial, Consolas, sans-serif;
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--primary-color);
+}
+
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.link-hover {
+  text-decoration: none;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+@media (hover: hover) {
+  .btn-hover:hover {
+    cursor: pointer;
+    opacity: .8;
+  }
+
+  .link-hover:hover {
+    cursor: pointer;
+    opacity: .7;
+  }
+}
