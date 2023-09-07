@@ -25,5 +25,6 @@
 ## Ссылка на макет в Figma
 https://www.figma.com/file/6FMWkB94wE7KTkcCgUXtnC/light-1 (Тема: dark-4)
 
-## Ссылка на PullRequest
-https://github.com/anlnv/movies-explorer-frontend/pull/1
+## Ссылка на PullRequests
+#### Этап №3: https://github.com/anlnv/movies-explorer-frontend/pull/1
+#### Этап №4: https://github.com/anlnv/movies-explorer-frontend/pull/2
