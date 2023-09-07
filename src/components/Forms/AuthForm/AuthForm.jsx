@@ -52,7 +52,7 @@ const AuthForm = ({ page, handleResponse }) => {
     } catch (e) {
       console.error(e);
       handleResponse({
-        title: POPUP_MESSAGES.FAIL.AUTH,
+        title: POPUP_MESSAGES.FAIL.AUTH.TITLE,
         message: e,
       });
     } finally {
