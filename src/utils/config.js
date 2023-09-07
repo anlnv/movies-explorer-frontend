@@ -40,7 +40,20 @@ const DEVICE = {
   }
 }
 
+const API = {
+  MAIN_API_URL: 'https://api.kinchik.nomoreparties.co',
+  // MAIN_API_URL: 'http://localhost:3000',
+  MOVIES_API_URL: 'https://api.nomoreparties.co/beatfilm-movies',
+  BEAT_URL: 'https://api.nomoreparties.co',
+}
+
+const MOVIES_CONFIG = {
+  SHORT_FILMS: 40,
+}
+
 export {
   ROUTER,
   DEVICE,
+  API,
+  MOVIES_CONFIG,
 };

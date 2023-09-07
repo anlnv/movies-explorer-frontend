@@ -9,6 +9,11 @@
   margin-bottom: 150px;
 }
 
+.cards__error-text {
+  margin: 0;
+  font-size: 28px;
+}
+
 .cards__list {
   max-width: 1280px;
   margin: 0;
@@ -58,6 +63,11 @@
 @media screen and (max-width: 620px) {
   .cards {
     padding: 50px 10px 116px;
+  }
+
+  .cards__error-text {
+    margin: 0;
+    font-size: 22px;
   }
 
   .cards__list {

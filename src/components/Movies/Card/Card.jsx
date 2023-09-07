@@ -1,10 +1,27 @@
 import './Card.css';
 import { useLocation } from 'react-router-dom';
-import { ROUTER } from '../../../utils/config';
+import { API, ROUTER } from '../../../utils/config';
 
-const Card = ({ card }) => {
+const Card = ({ card, isSaved, onSaveMovie, onDeleteMovie }) => {
   const { pathname } = useLocation();
+  const isMainPage = pathname === ROUTER.MOVIES;
+  const isSavedPage = pathname === ROUTER.SAVED_MOVIES;
 
+  const convertDuration = (duration) => {
+    return `${Math.floor(duration / 60)}ч ${duration % 60}м`;
+  };
+
+  const convertImageSrc = (card) => {
+    if (isMainPage) {
+      return API.BEAT_URL + card.image.url;
+    } else {
+      return card.image;
+    }
+  };
+
+  const openMovieTrailer = (card) => {
+    window.open(card.trailerLink, '_blank');
+  };
 
   return (
     <li className={'card'}>
@@ -13,28 +30,32 @@ const Card = ({ card }) => {
           {card.nameRU}
         </h2>
         <p className={'card__duration'}>
-          {card.duration}
+          {convertDuration(card.duration)}
         </p>
       </div>
-      <img className={'card__img'} src={card.img} alt={card.nameRU} />
+      <img className={'card__img'} src={convertImageSrc(card)} alt={card.nameRU}
+           onClick={() => openMovieTrailer(card)} />
       <div className={'card__btn-wrapper'}>
-        {pathname === ROUTER.MOVIES && !card.isLiked &&
+        {isMainPage && !isSaved &&
           <button
             className={'card__button card__button_type_not-saved btn-hover'}
             type={'button'}
+            onClick={() => onSaveMovie(card)}
           >Сохранить</button>
         }
 
-        {pathname === ROUTER.MOVIES && card.isLiked &&
+        {isMainPage && isSaved &&
           <button
             className={'card__button card__button_type_saved btn-hover'}
             type={'button'}
+            onClick={() => onDeleteMovie(card._id)}
           />
         }
-        {pathname === ROUTER.SAVED_MOVIES &&
+        {isSavedPage &&
           <button
             className={'card__button card__button_type_delete btn-hover'}
             type={'button'}
+            onClick={() => onDeleteMovie(card._id)}
           />
         }
       </div>

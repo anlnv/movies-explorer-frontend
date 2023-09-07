@@ -10,17 +10,19 @@ import { DEVICE } from '../../../../utils/config';
 const Navbar = () => {
   const { isLoggedIn } = useContext(CurrentUserContext).currentUser;
   const deviceType = useContext(DeviceTypeContext);
-  const isDesktop = deviceType === DEVICE.DESKTOP.NAME
+  const isDesktop = deviceType === DEVICE.DESKTOP.NAME;
   const [ isActiveBurgerMenu, setActiveBurgerMenu ] = useState(false);
 
   const handleActive = () => setActiveBurgerMenu(() => !isActiveBurgerMenu);
 
   return (
     <>
-      {!isLoggedIn && <NavLanding/>}
-      {isDesktop && isLoggedIn && <NavAuth isActiveBurger={isActiveBurgerMenu}/>}
-      {isLoggedIn && !isDesktop && <NavBurger isActive={isActiveBurgerMenu} toggleActive={handleActive}/>}
-      {!isDesktop && isLoggedIn && <button type={'button'} className={'burger-btn btn-hover'} onClick={handleActive}/>}
+      {!isLoggedIn && <NavLanding />}
+      {isDesktop && isLoggedIn && <NavAuth isActiveBurger={isActiveBurgerMenu} />}
+      {isLoggedIn && !isDesktop &&
+        <NavBurger isActive={isActiveBurgerMenu} toggleActive={handleActive} />}
+      {!isDesktop && isLoggedIn &&
+        <button type={'button'} className={'burger-btn btn-hover'} onClick={handleActive} />}
     </>
   );
 };

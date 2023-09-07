@@ -10,10 +10,10 @@ const Header = () => {
   const isPortfolioPage = pathname === ROUTER.LANDING;
 
   return (
-    <header className={`${isPortfolioPage ? 'header header_landing' : 'header' } `}>
-      <SectionContainer parent={'header'} mods={['jc-sb']}>
-        <Logo/>
-        <Navbar/>
+    <header className={`${isPortfolioPage ? 'header header_landing' : 'header'} `}>
+      <SectionContainer parent={'header'} mods={[ 'jc-sb' ]}>
+        <Logo />
+        <Navbar />
       </SectionContainer>
     </header>
   );

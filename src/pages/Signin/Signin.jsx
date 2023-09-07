@@ -1,10 +1,10 @@
 import './Signin.css';
 import AuthForm from '../../components/Forms/AuthForm/AuthForm';
 
-const Signin = ({ page }) => {
+const Signin = ({ page, handleResponse }) => {
   return (
     <main>
-      <AuthForm page={page} />
+      <AuthForm page={page} handleResponse={handleResponse} />
     </main>
   );
 };

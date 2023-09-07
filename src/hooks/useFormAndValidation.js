@@ -12,6 +12,16 @@ const useFormAndValidation = (initialValues = {}, initialErrors = {}, initialVal
     setValid(evt.target.closest('form').checkValidity());
   };
 
+  const regexForEmail = /^((([0-9A-Za-z]{1}[-0-9A-z.]+[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я.]+[0-9А-Яа-я]{1}))@([-A-Za-z]+\.){1,2}[-A-Za-z]{2,})$/u;
+  const handleChangeEmail = (evt) => {
+    handleChange(evt);
+    const { type, value } = evt.target;
+    if (type === 'email' && !regexForEmail.test(value)) {
+      setValid(false);
+      setErrors((e) => ({ ...e, email: 'Некорректный формат почты.' }));
+    }
+  };
+
   const resetForm = useCallback(
     (newValues = {}, newErrors = {}, newIsValid = false) => {
       setValues(newValues);
@@ -27,6 +37,7 @@ const useFormAndValidation = (initialValues = {}, initialErrors = {}, initialVal
     setErrors,
     isValid,
     handleChange,
+    handleChangeEmail,
     resetForm,
     setValues,
     setValid,

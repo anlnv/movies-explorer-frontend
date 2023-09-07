@@ -9,16 +9,16 @@ const NavAuth = () => {
         <li key={item.link}>
           <NavLink
             className={({ isActive }) => {
-              return `navbar__link-auth link-hover ${isActive && 'navbar__link-auth_active'}`
+              return `navbar__link-auth link-hover ${isActive && 'navbar__link-auth_active'}`;
             }}
             to={item.link}
           >
             {item.name}
           </NavLink>
         </li>
-      )
-    })
-  }
+      );
+    });
+  };
 
   return (<nav className={'navbar'}>
     <ul className={`navbar__list navbar__list_type_auth`}>
