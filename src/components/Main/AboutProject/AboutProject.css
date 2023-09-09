@@ -1,0 +1,139 @@
+.about {
+  padding: 112px 70px;
+}
+
+.about__list {
+  margin: 0;
+  padding: 71px 0 0;
+  list-style: none;
+  display: flex;
+  gap: 52px;
+}
+
+.about__item {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.about__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+}
+
+.about__subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px; /* 142.857% */
+}
+
+.about__duration-list {
+  margin: 0;
+  padding: 110px 0 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.about__duration-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.about__duration {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  color: var(--primary-color-inverted);
+  background-color: var(--bg-green);
+  text-align: center;
+  font-size: 14px;
+}
+
+.about__duration_type_frontend {
+  color: var(--primary-color);
+  background-color: var(--bg-caption);
+}
+
+.about__duration-name {
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px; /* 121.429% */
+}
+
+@media screen and (max-width: 1100px) {
+  .about {
+    padding: 92px 50px 90px;
+  }
+
+  .about__list {
+    gap: 37px;
+  }
+
+  .about__item {
+    gap: 23px;
+  }
+
+  .about__subtitle {
+    font-size: 12px;
+    line-height: 18px; /* 150% */
+  }
+
+  .about__duration-list {
+    padding: 93px 0 0;
+    grid-template-columns: 1.06fr 4fr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about {
+    padding: 72px 18px 90px;
+  }
+
+  .about__list {
+    padding: 61px 0 0;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .about__item {
+    gap: 14px;
+  }
+
+  .about__title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+    line-height: 1.25;
+  }
+
+  .about__subtitle {
+    font-size: 11px;
+    line-height: 16px; /* 145.455% */
+  }
+
+  .about__duration-list {
+    padding: 61px 0 0;
+    grid-template-columns: 1.08fr 2fr;
+  }
+
+  .about__duration {
+    padding: 11.5px 0;
+    font-size: 11px;
+  }
+
+  .about__duration-item {
+    gap: 10px;
+  }
+
+  .about__duration-name {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 18px 70px;
+}
+
+.header_landing {
+  background-color: var(--bg-header);
+}
+
+@media screen and (max-width: 1100px) {
+  .header {
+    padding: 18px 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    padding: 18px 14px;
+  }
+}
