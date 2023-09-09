@@ -22,6 +22,10 @@
 Билд приложения:
 - npm run build (yarn build)
 
+## Ссылки на приложение
+- Фронтенд: https://kinchik.nomoreparties.co
+- Бэкенд: https://api.kinchik.nomoreparties.co
+
 ## Ссылка на макет в Figma
 https://www.figma.com/file/6FMWkB94wE7KTkcCgUXtnC/light-1 (Тема: dark-4)
 
